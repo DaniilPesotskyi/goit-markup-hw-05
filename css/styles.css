@@ -522,6 +522,10 @@ img {
     flex-basis: calc((100% - 60px) / 3);
 }
 
+/* Hover Effect WorkCard */
+
+
+
 .work-link:hover,
 .work-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -555,16 +559,29 @@ img {
 /* Modal Window */
 
 .is-hidden {
-
+    opacity: 0;
+    pointer-events: none;
 }
 
 .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
     background: rgba(0, 0, 0, 0.2);
 }
 
 .modal {
-    width: 528px;
-    height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
 
     background-color: var(--primary-bg-color);
 }
@@ -576,6 +593,8 @@ img {
 
     width: 30px;
     height: 30px;
+    margin: 8px 0px 0px 490px;
+
     background-color: var(--primary-bg-color);
 
     border: 1px solid rgba(0, 0, 0, 0.1);
